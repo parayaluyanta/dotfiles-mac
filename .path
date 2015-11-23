@@ -1,0 +1,14 @@
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/"
+
+#KAFKA
+export KAFKA_HOME=/usr/local/kafka_2.10-0.8.2.2
+export KAFKA=$KAFKA_HOME/bin
+export KAFKA_CONFIG=$KAFKA_HOME/config
+
+
+export ACTIVATOR_HOME=/usr/local/activator-dist-1.3.6
+export GRADLE_HOME=/usr/local/gradle-2.9
+export PATH=$PATH:$GRADLE_HOME/bin
+
+export CLOJURE_HOME=/usr/local/clojure-1.6.0
+export PATH=$PATH:$CLOJURE_HOME/bin
