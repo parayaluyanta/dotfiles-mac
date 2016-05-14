@@ -11,13 +11,12 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
 
 (package-initialize)
-;;(load-theme 'solarized-dark t)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t))
+(load-theme 'solarized t)
+(set-frame-parameter nil 'background-mode 'dark)
+(set-terminal-parameter nil 'background-mode 'dark)
+
+(autoload 'typing-of-emacs "typing" "The Typing Of Emacs, a game." t)
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -25,9 +24,19 @@
  ;; If there is more than one, they won't work right.
  )
 
+(set-face-attribute 'default nil :height 150)
+
 ;;;;;;;;;;;;;;;;;;;;;;;; fullscreen ;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
-   '(initial-frame-alist (quote ((fullscreen . maximized)))))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
+ '(inhibit-startup-screen t)
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;; packages ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -62,6 +71,7 @@
 ;;  (when (not (package-installed-p p))
 ;;    (package-install p)))
 
+;;(package-install "go-mode")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;; add- "mero-load-path" -to-list;;;;;;;;;;;;
@@ -75,3 +85,4 @@
 
 ;;;;;;;;;;;;;;;;;;M-x rainbow-delimiters-mode;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(put 'upcase-region 'disabled nil)
