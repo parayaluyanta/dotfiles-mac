@@ -1,6 +1,16 @@
 
+copyConfigs(){
+ cp .vimrc ~/
+ cp .bash_profile ~/
+ cp .bashrc ~/
+ cp .bash_prompt ~/
+ cp .bash_aliases ~/
+
+ cp -r .emacs.d ~/
+}
 
 installDotfiles() {
+ copyConfigs
  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 }
 
