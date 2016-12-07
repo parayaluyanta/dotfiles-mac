@@ -9,9 +9,18 @@ copyConfigs(){
  cp -r .emacs.d ~/
 }
 
+installPathogen(){
+  mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+}
+
 installDotfiles() {
  copyConfigs
  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+ 
+ git clone https://github.com/altercation/vim-colors-solarized ~/.vim/bundle/vim-colors-solarized
+
+ installPathogen
 }
 
 configureGitDiff(){
