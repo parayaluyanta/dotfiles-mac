@@ -9,6 +9,11 @@ set number
 " " Highlight current line
 set cursorline
 
+set fileformat=unix                                                                                    
+                                                                                                       
+" enable clipboard register                                                                            
+" set clipboard^=unnamed
+
 if exists('+colorcolumn')
     set colorcolumn=100
 else
