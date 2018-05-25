@@ -8,6 +8,10 @@ installation
 ./go-on-mission.sh
 ```
 
+ide
+---
+
+`C-n` for explorer
 
 ![](ide.png)
 
