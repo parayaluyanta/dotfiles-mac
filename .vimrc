@@ -62,6 +62,7 @@ Bundle "scrooloose/nerdtree"
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'pangloss/vim-javascript'
 
 let g:solarized_termcolors= 16
 let g:solarized_termtrans = 16
