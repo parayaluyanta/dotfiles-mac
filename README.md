@@ -9,6 +9,8 @@ installation
 ```
 
 
+![](ide.png)
+
 previous repo
 ------------
 
