@@ -14,6 +14,9 @@ set fileformat=unix
 " enable clipboard register                                                                            
 " set clipboard^=unnamed
 
+" set backspace on VIm 
+set backspace=indent,eol,start
+
 if exists('+colorcolumn')
     set colorcolumn=100
 else

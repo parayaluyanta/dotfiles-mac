@@ -25,9 +25,9 @@ installDotfiles() {
 
 configureGitDiff(){
 
- echo ""
- echo "[info] : Installing .git config."
- echo ""
+ echo "|=============================================|"
+ echo "| [info] : Installing .git config.            |"
+ echo "|=============================================|"
 
  #sudo touch /usr/local/bin/git_diff_wrapper
  sudo tee -a /usr/local/bin/git_diff_wrapper  >/dev/null << 'EOF'
@@ -38,9 +38,9 @@ EOF
 }
 
 installVundleDeps(){
- echo ""
- echo "[info] : Installing dotfiles vundle dependencies."
- echo ""
+ echo "|===================================================|"
+ echo "| [info] : Installing dotfiles vundle dependencies. |"
+ echo "|===================================================|"
 
   vim +BundleInstall +qall
 
