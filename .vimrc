@@ -11,11 +11,11 @@ set cursorline
 
 set fileformat=unix                                                                                    
                                                                                                        
+" given +clipboard
 " enable clipboard register                                                                            
-" set clipboard^=unnamed
-
-" set backspace on VIm 
-set backspace=indent,eol,start
+" normal y should copy to clipboard
+set clipboard=unnamed
+" set clipboard=unnamedplus
 
 if exists('+colorcolumn')
     set colorcolumn=100
@@ -66,20 +66,38 @@ Bundle "scrooloose/nerdtree"
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'pangloss/vim-javascript'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'chrisbra/csv.vim'
 
-let g:solarized_termcolors= 16
-let g:solarized_termtrans = 16
+""javascript
+let g:javascript_plugin_jsdoc = 1
 
-let g:solarized_bold = 1
-let g:solarized_underline = 1 
-let g:solarized_italic = 1
-let g:solarized_contrast = "high"
-let g:solarized_visibility= "high"
+
+let g:solarized_termcolors= 256
+"let g:solarized_termtrans = 16
+
+"let g:solarized_bold = 1
+"let g:solarized_underline = 1 
+"let g:solarized_italic = 1
+"let g:solarized_contrast = "high"
+"let g:solarized_visibility= "high"
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
+
+set backspace=indent,eol,start
+
