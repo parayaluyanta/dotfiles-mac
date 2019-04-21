@@ -17,6 +17,9 @@ set fileformat=unix
 set clipboard=unnamed
 " set clipboard=unnamedplus
 
+" set backspace on VIm
+set backspace=indent,eol,start
+
 if exists('+colorcolumn')
     set colorcolumn=100
 else
@@ -67,6 +70,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-syntastic/syntastic'
+" === CCV formatter
 Plugin 'chrisbra/csv.vim'
 
 ""javascript
@@ -98,6 +102,4 @@ filetype plugin indent on
 syntax enable
 set background=light
 colorscheme solarized
-
-set backspace=indent,eol,start
 
