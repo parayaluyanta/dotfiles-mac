@@ -86,3 +86,8 @@
 ;;;;;;;;;;;;;;;;;;M-x rainbow-delimiters-mode;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (put 'upcase-region 'disabled nil)
+
+;; https://github.com/bbatsov/projectile
+(unless (package-installed-p 'projectile)
+  (package-install 'projectile))
+
