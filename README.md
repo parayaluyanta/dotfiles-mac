@@ -5,10 +5,10 @@ installation
 ------------
 
 ```bash
-git clone https://github.com/parayaluyanta/dotfiles-mac.git
-cd dotfiles-mac/
+git clone https://github.com/prayagupa/dotfiles-mac.git
 
-./go-on-mission.sh
+cd dotfiles-mac/
+./god-manifestation.sh
 
 # restart terminal
 ```

@@ -1,4 +1,26 @@
 
+backup="$HOME/dotfiles_backup"
+backupDotfiles(){
+ echo ""
+ echo "[info] : Backing up your dotfiles to $backup."
+ echo ""
+
+ mkdir -p "$backup"
+ mv ~/.vim "$backup"
+ mv ~/.vimrc "$backup"
+ mv ~/.bashrc "$backup"
+ mv ~/.bash_profile "$backup"
+ mv ~/.bash_aliases "$backup"
+ mv ~/.emacs.d "$backup"
+ mv ~/.gitconfig "$backup"
+
+ echo "##########################################################################"
+ echo "[info] : Backing up your dotfiles to $backup seems successful."
+ echo "##########################################################################"
+ echo ""
+}
+
+
 copyConfigs(){
  cp .vimrc ~/
  cp .bash_profile ~/
@@ -52,6 +74,7 @@ installVundleDeps(){
 
 
 onInit() {
+ backupDotfiles
  installDotfiles
  installVundleDeps 
 }

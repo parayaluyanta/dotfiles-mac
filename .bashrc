@@ -1,1 +1,1 @@
-export JAVA_HOME="/usr/bin/java"
+## .bashrc runs on every interactive shell launch
